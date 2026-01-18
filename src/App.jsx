@@ -5,8 +5,6 @@ import FeaturedScripts from "./components/FeaturedScripts.jsx";
 import FeaturedAuthors from "./components/FeaturedAuthors.jsx";
 import SearchBar from "./components/SearchBar.jsx";
 import RecentScripts from "./components/RecentScripts.jsx";
-import AccountCreation from "./components/AccountCreation.jsx";
-import AccountSignIn from "./components/AccountSignIn.jsx";
 
 class App extends React.Component {
   constructor(props) {
@@ -30,16 +28,6 @@ class App extends React.Component {
         </header>
 
         <FeaturedScripts />
-        <section className="section">
-          <div className="section__header">
-            <h2>Account access</h2>
-            <p>Create a profile or sign in to start sharing scripts.</p>
-          </div>
-          <div className="auth-grid">
-            <AccountCreation />
-            <AccountSignIn />
-          </div>
-        </section>
         <FeaturedAuthors />
         <SearchBar />
         <RecentScripts />
