@@ -1,47 +1,39 @@
+import React from "react";
 import "./index.css";
+import InfoBar from "./components/InfoBar.jsx";
+import FeaturedScripts from "./components/FeaturedScripts.jsx";
+import FeaturedAuthors from "./components/FeaturedAuthors.jsx";
+import SearchBar from "./components/SearchBar.jsx";
+import RecentScripts from "./components/RecentScripts.jsx";
 
-const features = [
-  {
-    title: "Clean starting point",
-    description: "React 18 + Vite with sensible defaults so you can build fast.",
-  },
-  {
-    title: "Ready for growth",
-    description: "Modular structure with a simple landing layout and styling.",
-  },
-  {
-    title: "Developer friendly",
-    description: "ESLint configuration and scripts to keep the project tidy.",
-  },
-];
+class App extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      title: "Screenplays",
+    };
+  }
 
-export default function App() {
-  return (
-    <div className="app">
-      <header className="hero">
-        <p className="hero__eyebrow">Screenplays</p>
-        <h1 className="hero__title">Start writing. Start shipping.</h1>
-        <p className="hero__subtitle">
-          A fresh React setup to bootstrap the next great story-driven product.
-        </p>
-        <div className="hero__actions">
-          <button className="button button--primary" type="button">
-            Create your first project
-          </button>
-          <button className="button button--ghost" type="button">
-            Explore templates
-          </button>
-        </div>
-      </header>
+  render() {
+    return (
+      <div className="app">
+        <InfoBar />
+        <header className="hero">
+          <p className="hero__eyebrow">{this.state.title}</p>
+          <h1 className="hero__title">Write bold stories. Share them widely.</h1>
+          <p className="hero__subtitle">
+            Curate scripts, highlight authors, and track the freshest stories in one
+            place.
+          </p>
+        </header>
 
-      <section className="features">
-        {features.map((feature) => (
-          <article className="feature-card" key={feature.title}>
-            <h2>{feature.title}</h2>
-            <p>{feature.description}</p>
-          </article>
-        ))}
-      </section>
-    </div>
-  );
+        <FeaturedScripts />
+        <FeaturedAuthors />
+        <SearchBar />
+        <RecentScripts />
+      </div>
+    );
+  }
 }
+
+export default App;
