@@ -34,11 +34,16 @@ class FeaturedAuthors extends React.Component {
                 </div>
               </div>
             </article>
-          ))}
+            ))
+          )}
         </div>
       </section>
     );
   }
 }
+
+FeaturedAuthors.defaultProps = {
+  profiles: [],
+};
 
 export default FeaturedAuthors;
