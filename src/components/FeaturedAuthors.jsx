@@ -21,7 +21,7 @@ class FeaturedAuthors extends React.Component {
               </div>
               <div className="author-card__details">
                 <h3>
-                  <a className="author-card__name" href={`#/author/${author.slug}`}>
+                  <a className="author-card__name" href="#marketplace">
                     {author.name}
                   </a>
                 </h3>

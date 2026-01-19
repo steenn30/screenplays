@@ -485,11 +485,6 @@ body {
     align-items: flex-start;
   }
 
-  .author-page__header {
-    flex-direction: column;
-    align-items: flex-start;
-  }
-
   .marketplace__layout {
     grid-template-columns: 1fr;
   }

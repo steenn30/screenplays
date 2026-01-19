@@ -55,29 +55,20 @@ class App extends React.Component {
     return (
       <div className="app">
         <InfoBar />
-        {this.state.view === "author" ? (
-          <AuthorScriptsPage
-            profile={selectedProfile}
-            onBack={this.handleBackToHome}
-          />
-        ) : (
-          <>
-            <header className="hero">
-              <p className="hero__eyebrow">{this.state.title}</p>
-              <h1 className="hero__title">Write bold stories. Share them widely.</h1>
-              <p className="hero__subtitle">
-                Curate scripts, highlight authors, and track the freshest stories in
-                one place.
-              </p>
-            </header>
+        <header className="hero">
+          <p className="hero__eyebrow">{this.state.title}</p>
+          <h1 className="hero__title">Write bold stories. Share them widely.</h1>
+          <p className="hero__subtitle">
+            Curate scripts, highlight authors, and track the freshest stories in one
+            place.
+          </p>
+        </header>
 
-            <FeaturedScripts />
-            <FeaturedAuthors profiles={authorProfiles} />
-            <ProfileMarketplace profiles={authorProfiles} />
-            <SearchBar />
-            <RecentScripts />
-          </>
-        )}
+        <FeaturedScripts />
+        <FeaturedAuthors />
+        <ProfileMarketplace />
+        <SearchBar />
+        <RecentScripts />
       </div>
     );
   }
