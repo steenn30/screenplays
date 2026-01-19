@@ -46,7 +46,11 @@ class FeaturedAuthors extends React.Component {
                   .join("")}
               </div>
               <div className="author-card__details">
-                <h3>{author.name}</h3>
+                <h3>
+                  <a className="author-card__name" href="#marketplace">
+                    {author.name}
+                  </a>
+                </h3>
                 <div className="tag-row">
                   {author.genres.map((genre) => (
                     <span className="tag" key={`${author.name}-${genre}`}>

@@ -3,6 +3,7 @@ import "./index.css";
 import InfoBar from "./components/InfoBar.jsx";
 import FeaturedScripts from "./components/FeaturedScripts.jsx";
 import FeaturedAuthors from "./components/FeaturedAuthors.jsx";
+import ProfileMarketplace from "./components/ProfileMarketplace.jsx";
 import SearchBar from "./components/SearchBar.jsx";
 import RecentScripts from "./components/RecentScripts.jsx";
 
@@ -29,6 +30,7 @@ class App extends React.Component {
 
         <FeaturedScripts />
         <FeaturedAuthors />
+        <ProfileMarketplace />
         <SearchBar />
         <RecentScripts />
       </div>
