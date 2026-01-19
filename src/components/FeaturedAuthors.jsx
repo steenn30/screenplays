@@ -11,10 +11,7 @@ class FeaturedAuthors extends React.Component {
           <p>Explore a hand-picked roster of market-ready storytellers.</p>
         </div>
         <div className="authors-grid">
-          {profiles.length === 0 ? (
-            <p className="section__empty">No featured authors available yet.</p>
-          ) : (
-            profiles.map((author) => (
+          {profiles.map((author) => (
             <article className="author-card" key={author.name}>
               <div className="author-card__logo">
                 {author.name
@@ -24,7 +21,7 @@ class FeaturedAuthors extends React.Component {
               </div>
               <div className="author-card__details">
                 <h3>
-                  <a className="author-card__name" href={`#/author/${author.slug}`}>
+                  <a className="author-card__name" href="#marketplace">
                     {author.name}
                   </a>
                 </h3>
